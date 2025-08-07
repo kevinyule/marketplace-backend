@@ -9,12 +9,14 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "��#\u0000 \u0000m\u0000a\u0000r\u0000k\u0000e\u0000t\u0000p\u0000l\u0000a\u0000c\u0000e\u0000-\u0000b\u0000a\u0000c\u0000k\u0000e\u0000n\u0000d\u0000\r\u0000 \u0000",
   "dependencies": {
     "axios": "^1.11.0",
+    "bcrypt": "^6.0.0",
     "cors": "^2.8.5",
     "dotenv": "^17.2.1",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "mongoose": "^8.17.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.3",
@@ -22,5 +24,13 @@
     "nodemon": "^3.1.10",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.9.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinyule/marketplace-backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kevinyule/marketplace-backend/issues"
+  },
+  "homepage": "https://github.com/kevinyule/marketplace-backend#readme"
 }
