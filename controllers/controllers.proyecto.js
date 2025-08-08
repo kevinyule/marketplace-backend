@@ -6,35 +6,35 @@ const crearProyecto = async (req, res) => {
         const { 
             nombre, 
             descripcion, 
-            imagenes, 
+            imagenes,  // Aquí viene tu Base64
             documentacion, 
             tecnologias, 
             enlaceDemo, 
             enlaceRepositorio, 
             autor 
         } = req.body;
-        
+
+        // Creamos el documento
         const nuevoProyecto = new Proyecto({
             nombre,
             descripcion,
-            imagenes: imagenes || [],
+            imagenes: imagenes || [], // Array de cadenas Base64
             documentacion,
             tecnologias: tecnologias || [],
             enlaceDemo,
             enlaceRepositorio,
             autor
         });
-        
+
         const proyectoGuardado = await nuevoProyecto.save();
-        
-        // Poblar información del autor
+
         await proyectoGuardado.populate('autor', 'nombre correo');
-        
+
         res.status(201).json({
             mensaje: "Proyecto creado exitosamente",
             proyecto: proyectoGuardado
         });
-        
+
     } catch (error) {
         res.status(500).json({ 
             mensaje: "Error al crear proyecto", 
@@ -42,6 +42,7 @@ const crearProyecto = async (req, res) => {
         });
     }
 };
+
 
 // Obtener todos los proyectos
 const obtenerProyectos = async (req, res) => {

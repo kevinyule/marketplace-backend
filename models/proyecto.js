@@ -13,8 +13,8 @@ const proyectoSchema = new Schema({
         maxLength: 1000
     },
     imagenes: [{
-        type: String, // URLs de las imágenes
-        maxLength: 500
+        type: String, // Guardará Base64 sin límite de tamaño
+        required: false
     }],
     documentacion: {
         type: String, // URL del archivo o texto
